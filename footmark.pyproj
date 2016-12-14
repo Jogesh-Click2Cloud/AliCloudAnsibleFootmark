@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{421d6f07-0ebe-4bbe-9f3e-21efa7d72a7c}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>__main__.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="footmark\connection.py" />
+    <Compile Include="footmark\ecs\connection.py" />
+    <Compile Include="footmark\ecs\ecsobject.py" />
+    <Compile Include="footmark\ecs\instance.py" />
+    <Compile Include="footmark\ecs\regioninfo.py" />
+    <Compile Include="footmark\ecs\securitygroup.py" />
+    <Compile Include="footmark\ecs\volume.py" />
+    <Compile Include="footmark\ecs\__init__.py" />
+    <Compile Include="footmark\exception.py" />
+    <Compile Include="footmark\provider.py" />
+    <Compile Include="footmark\pyami\config.py" />
+    <Compile Include="footmark\pyami\__init__.py" />
+    <Compile Include="footmark\regioninfo.py" />
+    <Compile Include="footmark\__init__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="tests\compat.py" />
+    <Compile Include="tests\test.py" />
+    <Compile Include="tests\unit\ecs\test_instance.py" />
+    <Compile Include="tests\unit\ecs\__init__.py" />
+    <Compile Include="tests\unit\__init__.py" />
+    <Compile Include="tests\__init__.py" />
+    <Compile Include="__main__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="footmark" />
+    <Folder Include="footmark\ecs" />
+    <Folder Include="footmark\pyami" />
+    <Folder Include="tests" />
+    <Folder Include="tests\unit" />
+    <Folder Include="tests\unit\ecs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
